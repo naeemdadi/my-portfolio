@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import { SectionTitle, Paragraph } from '../../styles';
-import { WorkItem, WorkTitle, JobTitle } from './styles';
+import React from "react";
+import Layout from "../../components/Layout";
+import { SectionTitle, Paragraph } from "../../styles";
+import { WorkItem, WorkTitle, JobTitle } from "./styles";
 
 const Work = ({ user }) => {
   return (

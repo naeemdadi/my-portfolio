@@ -1,11 +1,15 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import { SectionTitle, Pill } from '../../styles';
-import { ProjectItem, ProjectTitle, SkillContainer, ProjectLinks } from './styles';
+import React from "react";
+import Layout from "../../components/Layout";
+import { SectionTitle, Pill } from "../../styles";
+import {
+  ProjectItem,
+  ProjectTitle,
+  SkillContainer,
+  ProjectLinks,
+} from "./styles";
 
 const Projects = ({ user }) => {
-
-  console.log(user.projects)
+  console.log(user.projects);
   return (
     <Layout user={user}>
       <div>
@@ -22,23 +26,37 @@ const Projects = ({ user }) => {
               </SkillContainer>
               <ProjectLinks>
                 <div>
-                    <p>GitHub Repo: </p><Pill key={i}><a style={{color: "inherit", textDecoration: "none"}} href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer noopener">{project.githubUrl}</a></Pill>
+                  <p>GitHub Repo: </p>
+                  <Pill key={i}>
+                    <a
+                      style={{ color: "inherit", textDecoration: "none" }}
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      {project.githubUrl}
+                    </a>
+                  </Pill>
                 </div>
                 {project.url ? (
                   <div>
-                    <p>Live Project Link: </p><Pill key={i}><a style={{color: "inherit", textDecoration: "none"}} href={project.url}
-                    target="_blank"
-                    rel="noreferrer noopener">{project.url}</a></Pill>
-                </div>
+                    <p>Live Project Link: </p>
+                    <Pill key={i}>
+                      <a
+                        style={{ color: "inherit", textDecoration: "none" }}
+                        href={project.url}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        {project.url}
+                      </a>
+                    </Pill>
+                  </div>
                 ) : (
                   <></>
                 )}
-                
-            </ProjectLinks>
+              </ProjectLinks>
             </ProjectItem>
-            
           ))}
         </ul>
       </div>
