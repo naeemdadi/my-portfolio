@@ -7,8 +7,6 @@ import { HeaderContainer, Header, Image, ViewResumeLink } from "./styles";
 const UserHeader = ({ user }) => {
   const location = useLocation();
 
-  console.log(user);
-
   return (
     <HeaderContainer isHome={location.pathname === "/"}>
       <Header>
@@ -26,9 +24,9 @@ const UserHeader = ({ user }) => {
           </h4>
           <p>{user.basics.label}</p>
           {/* <p>Coding in {user.basics.region}</p> */}
-          {/* <p>
+          <p>
             {user.basics.yearsOfExperience} years of experience as a developer
-          </p> */}
+          </p>
           <p>{user.basics.headline}</p>
           <p>
             Email:{" "}
@@ -51,7 +49,7 @@ const UserHeader = ({ user }) => {
       <div>
         <ViewResumeLink
           // href={`https://gitconnected.com/${user.basics.username}/resume`}
-          href="https://drive.google.com/file/d/1vO_BkFIrkt1UQoRBiYLf6pvkdIdXOij5/view?usp=drivesdk"
+          href="https://drive.google.com/file/d/1vO_BkFIrkt1UQoRBiYLf6pvkdIdXOij5/view"
           target="_blank"
           rel="noopener noreferrer"
         >
